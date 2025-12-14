@@ -8,19 +8,19 @@ import MyMemes from './components/admin/Admin';
 import Upload from './upload/Upload';
 import Getupload from './upload/Getupload';
 import EditPost from './components/addmenu/Editmenu';
+import Randomfeed from './components/menu/MenuDetails';
+import MyRandompost from './components/admin/Randomadmin';
 function App() {
   return (
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<PostsFeed />} />
+        <Route path="/" element={<Randomfeed />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/create-post" element={<CreatePost />} />
         <Route path="/edit-post/:id" element={<EditPost />} />
-        <Route path="/my-memes" element={<MyMemes />} />
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/getupload" element={<Getupload />} />
+        <Route path="/my-memes" element={<MyRandompost />} />
       </Routes>
     </div>
   );
