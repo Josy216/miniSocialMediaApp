@@ -1,0 +1,12 @@
+.hero-container{
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-container h1{
+  font-size: 45px;
+}
+.hero-container p{
+  font-size: 22px;
+}
