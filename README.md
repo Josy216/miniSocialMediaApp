@@ -38,7 +38,6 @@ npm install express mysql2 multer bcryptjs jsonwebtoken cors dotenv
 ```sql
 [CREATE DATABASE social_media;
 
-USE social_media;
 
 CREATE TABLE users (
   id INT PRIMARY KEY AUTO_INCREMENT,
@@ -57,34 +56,7 @@ CREATE TABLE posts (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
-```
-
-### 3️⃣ File Upload with Multer
-```javascript
-const multer = require('multer');
-const path = require('path');
-
-const storage = multer.diskStorage({
-  destination: 'uploads/',
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
-  }
-});
-
-const upload = multer({ 
-  storage: storage,
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
-  fileFilter: (req, file, cb) => {
-    const allowed = /jpeg|jpg|png|gif/;
-    const mimetype = allowed.test(file.mimetype);
-    const extname = allowed.test(path.extname(file.originalname).toLowerCase());
-    
-    if (mimetype && extname) {
-      return cb(null, true);
-    }
-    cb(new Error('Images only!'));
-  }
-});
+``
 ```](https://jocodeadminme.josephteka.com/)
 
 ### 4️⃣ API Endpoints Needed
