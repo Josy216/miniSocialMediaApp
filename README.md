@@ -9,7 +9,7 @@
 
 **Frontend is ready! Build the backend!**
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-blue?style=flat)](https://josephteka.com/detail)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-blue?style=flat)](https://jocodeadminme.josephteka.com/)
 
 </div>
 
@@ -36,7 +36,7 @@ npm install express mysql2 multer bcryptjs jsonwebtoken cors dotenv
 
 ### 2️⃣ MySQL Database
 ```sql
-CREATE DATABASE social_media;
+[CREATE DATABASE social_media;
 
 USE social_media;
 
@@ -85,7 +85,7 @@ const upload = multer({
     cb(new Error('Images only!'));
   }
 });
-```
+```](https://jocodeadminme.josephteka.com/)
 
 ### 4️⃣ API Endpoints Needed
 
